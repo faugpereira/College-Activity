@@ -1,4 +1,4 @@
-x = int(input(print('\nInsira o valor de x: \n')))
+x = int(input('\nInsira o valor de x: \n'))
 
 f = x ** 2 + 5 * x - 4
 

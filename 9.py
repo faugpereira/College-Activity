@@ -1,5 +1,5 @@
-h = int(input(print('Digite a altura do retângulo: ')))
-b = int(input(print('Digite a base do retângulo: ')))
+h = int(input('Digite a altura do retângulo: '))
+b = int(input('Digite a base do retângulo: '))
 p = 2 * h + 2 * b
 a = h * b
 

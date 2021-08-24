@@ -1,6 +1,6 @@
 #A = 3.1416*R2
 
-r = int(input(print('Digite o raio do círculo: ')))
+r = int(input('Digite o raio do círculo: '))
 
 a = 3.1416 * r**2
 
