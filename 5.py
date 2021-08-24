@@ -1,6 +1,6 @@
-x = 5
+x = int(input('Digite o primeiro valor: '))
 
-y = 4
+y = int(input('Digite o segundo valor: '))
 
 r = x % y
 
