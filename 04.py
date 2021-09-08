@@ -6,4 +6,3 @@ if (s <= 1000) and (s >= 500):
 elif s > 1000:
     s += s * 5/100
     print('Seu salário receberá reajuste de 5% e será R$ {}'.format(s))
-
