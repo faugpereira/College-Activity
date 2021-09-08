@@ -22,4 +22,4 @@ elif (n2 != maior and n2 != menor):
 else:
     meio = n3
 
-print('[{},{},{}]'.format(menor, meio, maior))
+print('\n[{},{},{}]'.format(menor, meio, maior))
