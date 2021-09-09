@@ -23,7 +23,7 @@ class ProdutoLigado:
             celula_atual = celula_atual.proximo
 
     def inserir_no_inicio(self, conteudo):
-        celula = Produto(conteudo)
+        celula = Celula(conteudo)
         celula.proximo = self._inicio
         self._inicio = celula
         self._quantidade += 1
@@ -33,7 +33,7 @@ class ProdutoLigado:
             self.inserir_no_inicio(conteudo)
             return
         celula_anterior = self._celula(posicao - 1)
-        celula = Produto(conteudo)
+        celula = Celula(conteudo)
         celula.proximo = celula_anterior.proximo
         celula_anterior.proximo = celula
         self._quantidade += 1
