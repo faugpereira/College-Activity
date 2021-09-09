@@ -40,7 +40,7 @@ class ListaLigada:
 
     def _celula(self, posicao):
         self._validar_posicao(posicao)
-    celula_atual = self.inicio
+        celula_atual = self.inicio
         for i in range(0, posicao):
             celula_atual = celula_atual.proximo
         return celula_atual
