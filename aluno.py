@@ -4,7 +4,9 @@ class Aluno:
         self.curso = curso
         self.p1 = p1
         self.p2 = p2
-        self.m = (p1+p2)/2
+
+    def media(self):
+        return(self.p1+self.p2)/2
 
     def lista(self):
-        print('{} do curso {} tem nota P1 = {} e P2 = {} cuja média é {}'.format(self.nome, self.curso, self.p1, self.p2, self.m))
+        print('{} do curso {} tem nota P1 = {} e P2 = {} cuja média é {}'.format(self.nome, self.curso, self.p1, self.p2, self.media()))
