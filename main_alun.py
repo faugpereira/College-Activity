@@ -7,6 +7,7 @@ a4=Aluno('Roberta', 'Geologia', 10, 9)
 a5=Aluno('Gregório', 'Gastronomia', 9, 9)
 
 a1.lista()
+a1.lista()
 a2.lista()
 a3.lista()
 a4.lista()
