@@ -9,4 +9,4 @@ class Aluno:
         return(self.nota1+self.nota2)/2
 
     def lista(self):
-        print('NOME: {:10}    RA: {:12}    \nnota 1 = {}  \nnota 2 = {}  \nmédia = {}'.format(self.nome, self.ra, self.nota1, self.nota2, self.media()))
+        print('\nNOME: {:10}    RA: {:12}    \nnota 1 = {}  \nnota 2 = {}  \nmédia = {}'.format(self.nome, self.ra, self.nota1, self.nota2, self.media()))
