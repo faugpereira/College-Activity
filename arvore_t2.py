@@ -1,4 +1,4 @@
-from arvore_lista_duplamente_ligada import ListaDuplamenteLigada
+from arvore_lista_duplamente_ligada_t2 import ListaDuplamenteLigada
 
 class ListaDeNodos(ListaDuplamenteLigada):
 
@@ -25,7 +25,6 @@ class ListaDeNodos(ListaDuplamenteLigada):
             if atual.conteudo.conteudo == conteudo:
                 return i
             atual = atual.proximo
-
 
 class Nodo:
 
@@ -60,7 +59,6 @@ class Nodo:
             posicao = self.pai.filhos.posicao(self.conteudo)
             return self.pai.filhos.remover(posicao)
         return self
-
 
 class Arvore:
 
