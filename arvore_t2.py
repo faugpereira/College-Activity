@@ -26,6 +26,21 @@ class ListaDeNodos(ListaDuplamenteLigada):
                 return i
             atual = atual.proximo
 
+    def buscar(self, conteudo):
+        encontrados = []
+        atual = self.inicio
+        proximo = None
+        for i in range(0, self.quantidade):
+            if conteudo == atual.conteudo.conteudo:
+                return atual.conteudo.pai
+            if atual is not None and atual.conteudo.filhos:
+                while atual is not None and atual.conteudo.filhos:
+                    encontrado = atual.conteudo.filhos.buscar(conteudo)
+                    if encontrado:
+                        encontrados.append(encontrado)
+                    atual = atual.proximo
+                return encontrados
+
 class Nodo:
 
     def __init__(self, conteudo):
@@ -37,7 +52,7 @@ class Nodo:
         return self.conteudo
 
     def imprimir(self, nivel=0):
-        print("{}- {}".format(" "*nivel, self.conteudo))
+        print("{}- {}".format("    "*nivel, self.conteudo))
         if self.filhos:
             self.filhos.imprimir(nivel+1)
 
@@ -84,3 +99,77 @@ class Arvore:
             else:
                 encontrado.remover()
         return encontrado
+
+    def buscar(self, conteudo):
+        atual = self.raiz
+        retorno = []
+        if atual.filhos:
+            retorno = atual.filhos.buscar(conteudo)
+            if retorno:
+                return retorno
+            else:
+                return "Nenhum aluno encontrado"
+
+    """
+    def encontrar_nodo(self, conteudo):
+        while persona =! self.conteudo:
+            if conteudo == self.conteudo:
+                return self
+            if self.filhos:
+                return self.filhos.localizar_nodo(conteudo)
+    
+    def localizar_nodo(self, conteudo):
+        if conteudo == self.conteudo:
+            return self
+        if self.filhos:
+            return self.filhos.localizar_nodo(conteudo)
+    
+    while atual < nivel:
+        nivel+1:
+        for conteudo in nivel:
+            if class.teacher = teacher
+                print("O professor ministra as aulas: ") 
+            else:
+                print("Não encontradas aulas ministradas por esse professor ")
+    
+    def printTreeIndented(self, nivel=0):
+        print("{}- {}".format("    "*nivel, self.conteudo))
+        if self.raiz == None: return
+            printTreeIndented(self.pai, nivel+1)
+            print("{}- {}".format("    "*nivel, self.conteudo))
+            self.printTreeIndented(self.raiz, nivel+1)
+    
+    def localizar_nodo(self, conteudo):
+        if conteudo == self.conteudo:
+            return self
+        if self.filhos:
+            return self.filhos.localizar_nodo(conteudo)
+    
+    while nivel <= raiz >= 4:
+        nivel+1:
+        for conteudo in nivel:
+            if class.teacher = teacher
+                print("O professor ministra as aulas: ") 
+            else:
+                print("Não encontradas aulas ministradas por esse professor ")
+     
+    for conteudo in nivel:
+        if class.aluno = aluno
+            print("O aluni está matriculado nas disciplinas: ") 
+        else:
+            print("Não encontradas as disciplinas em que este aluno está matriculado") 
+    
+    for class in school:
+        if class.teacher = teacher
+            return //  imprima aqui o professor exemplo - print("The teacher is %s") 
+        else:
+            // coloca aqui o script caso não tenha localizado nada exemplo - print("Not fou
+    
+            
+    def printTreeInorder(tree) :
+        if tree == None : return
+        printTreeInorder(tree.left)
+        print (tree.cargo, end="")
+        printTreeInorder(tree.right)
+                        
+    """
